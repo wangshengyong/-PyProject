@@ -1,26 +1,50 @@
 #-*- encoding=utf-8 -*-
 '''
 Created on 2016年9月30日
-
-@author: Administrator
+列表
+@author: evan
 '''
-#list切片
+# 1、使用下标索引来访问列表中的值
+list1 = ['physics', 'chemistry', 1997, 2000];
+list2 = [1, 2, 3, 4, 5, 6, 7 ];
+print "list1[0]: ", list1[0]
+print "list2[1:5]: ", list2[1]
+print "list2[-1]: ", list2[-1], list2[-3]
+
+# 2、使用append()方法来添加列表项
+list2.append(8)
+print list2[len(list2) - 1]
+
+# 3、通过索引下标更新列表元素
+list2[7] = 88
+print list2[7]
+
+# 4、使用 del 语句来删除列表的的元素
+print list2
+del list2[7]
+print list2
+
+# 5、Python列表脚本操作符
+print 'len  ', len([1,2,3])
+print '[] + []  ', [1,2,3] + [4,5,6]
+print '[] * n  ' , [1,2,3] * 4
+print '3 in [1, 2, 3] ', 3 in [1,2,3]
+
+# 6、列表截取(切片)
 L = range(1, 101)
-# print L[:10]
-# print L[2::3]
-# print L[4:50:5]
+print 'L[1:3] ', L[1:3]
+print 'L[88:] ', L[88:]  #从88开始到结束，省略冒号后面的。
+print 'L[:10] ', L[:10]  #从第一个数到第10个数，省略冒号前面的，注意索引是0-9。
+print 'L[2::3] ', L[2::3] #3的倍数。
+print 'L[4:50:5] ', L[4:50:5] #不大于50的5的倍数。
+print 'L[-10:] ', L[-10:]#最后10个数；
+print 'L[-56::5] ', L[-46::5] #最后10个5的倍数。
 
 
-d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59 }
-values = d.values();
-keys = d.keys();
-# print keys
-# print values
-
-#列表生成式， 1*2 , 3*4 ,5*6 .... 99*100
+# 7、列表生成式， 1*2 , 3*4 ,5*6 .... 99*100
 print [x * (x + 1) for x in range(1,100,2)]
 
-
+#列表生成式示例
 d = { 'Adam': 95, 'Lisa': 85, 'Bart': 59 }
 def generate_tr(name, score):
     if score < 60 : 
