@@ -183,6 +183,11 @@ print testperformance(10)
 functools.partial就是帮助我们创建一个偏函数的。
 '''
 
+import functools
+sorted_ignore_case = functools.partial(sorted, cmp = lambda x , y : cmp(x.upper(), y.upper()))
+print sorted_ignore_case(['bob', 'about', 'Zoo', 'Credit'])
+
+
 
 
 
