@@ -56,6 +56,22 @@ print d
 #5、遍历字典, 先遍历得到每个key，然后通过key取到value
 for key in d:
     print key, ' : ', d[key]
+#直接遍历出key和value    
+for k,v in d.iteritems():
+    print k , ' : ', v
+    
+
+class Person(object):
+    __count = 0
+    def __init__(self, name):
+        self.name = name
+        Person.__count =Person.__count + 1
+        print Person.__count
+p1 = Person('Bob')
+p2 = Person('Alice')
 
 
+
+print p2.__count
+print Person.__count
 
